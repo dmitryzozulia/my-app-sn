@@ -1,0 +1,13 @@
+.dialogs {
+ margin: 0 auto;
+ display: grid;
+ grid-template-areas: 
+ "d m";
+ grid-template-columns: 2fr 10fr;
+}
+.dialogsList {
+  grid-area: d;
+}
+.messagesList {
+  grid-area: m;
+}

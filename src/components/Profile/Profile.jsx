@@ -1,30 +1,16 @@
 import React from 'react';
 import s from './Profile.module.css';
+import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = () => {
+
+const Profile = (props) => {
+    console.log(props)
     return (
         <div className={s.content}>Main content
-            <div>
-                <img src='https://filedn.com/ltOdFv1aqz1YIFhf4gTY8D7/ingus-info/BLOGS/Photography-stocks3/stock-photography-slider.jpg' />
-            </div>
-            <div>
-                avatar + descript
-            </div>
-            <div>
-                My post
-            <div>
-                    new post
-            </div>
-                <div>
-                    <div>
-                        post 1
-                    </div>
-                    <div>
-                        post2
-                    </div>
-                </div>
-            </div>
-        </div >
+            <ProfileInfo />
+            <MyPosts posts={props.posts} />
+        </div>
     );
 }
 export default Profile;
